@@ -12,21 +12,24 @@
     </head>
     <body>
         <h1>Hello Sample World!</h1>
-        
+
         <h2>Users</h2>
         <%
-            for (User u : bean.getUsers()){
-                
-                %>
-                <p><b><%=u.getName()%></b></p>
-                <%
-                    for (UserAttribute a : bean.getUserAttributes(u)){
-                        %>
-                        <p>  -- [<%=a.getType()%>]<%=a.getName()%>:<%=a.getValue()%></p>
-                        <%
-                    }
-            }
+            for (User u : bean.getUsers()) {
+
         %>
-        
+        <ul>
+            <li><b><%=u.getName()%></b></li>
+            <ul>
+                <%
+                    for (UserAttribute a : bean.getUserAttributes(u)) {
+                %>
+                <li>[<%=a.getType()%>]<%=a.getName()%>:<%=a.getValue()%></li>
+                <%
+                        }
+                    }
+                %>
+            </ul>
+        </ul>
     </body>
 </html>

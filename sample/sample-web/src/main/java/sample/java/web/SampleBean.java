@@ -14,7 +14,6 @@ import javax.ejb.EJB;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import sample.java.api.InternalBeanLocal;
 import sample.java.api.ServiceBeanRemote;
 import sample.java.api.model.User;
 import sample.java.api.model.UserAttribute;
@@ -25,7 +24,7 @@ import sample.java.api.model.UserAttribute;
  */
 public class SampleBean {
 
-    @EJB
+    @EJB(beanInterface = ServiceBeanRemote.class, beanName = "ServiceBean", mappedName = "java:module/ServiceBean")
     private ServiceBeanRemote sampleEjb;
 
     public SampleBean() {
@@ -52,7 +51,8 @@ public class SampleBean {
         Context ctx = new InitialContext(jndiProps);
         
         // lookup
-        sampleEjb = (ServiceBeanRemote) ctx.lookup("java:global/sample.java.ear-1.0.0-SNAPSHOT/sample.java.ejb-1.0.0-SNAPSHOT/ServiceBean!sample.java.api.ServiceBeanRemote");
+        //sampleEjb = (ServiceBeanRemote) ctx.lookup("java:global/sample.java.ear-1.0.0-SNAPSHOT/sample.java.ejb-1.0.0-SNAPSHOT/ServiceBean!sample.java.api.ServiceBeanRemote");
+        sampleEjb = (ServiceBeanRemote) ctx.lookup("java:global/sample-ear-1.0.0-SNAPSHOT/sample-ejb-1.0.0-SNAPSHOT/ServiceBean!sample.java.api.ServiceBeanRemote");
     }
 
     public List<User> getUsers() {
