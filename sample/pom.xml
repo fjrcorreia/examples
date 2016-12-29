@@ -20,11 +20,11 @@
     
     
     <modules>
-        <module>sample.java.web</module>
-        <module>sample.java.jpa</module>
-        <module>sample.java.ejb</module>
-        <module>sample.java.api</module>
-        <module>sample.java.ear</module>
+        <module>sample-ejb</module>
+        <module>sample-web</module>
+        <module>sample-jpa</module>
+        <module>sample-api</module>
+        <module>sample-ear</module>
     </modules>
   
   
@@ -71,5 +71,5 @@
             </activation>
         </profile>
     </profiles>
-  
+    <name>Tutorial :: Sample Java EE</name>
 </project>

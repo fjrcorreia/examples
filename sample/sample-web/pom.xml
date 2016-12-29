@@ -8,10 +8,10 @@
     </parent>
 
     <groupId>sample.java</groupId>
-    <artifactId>sample.java.web</artifactId>
+    <artifactId>sample-web</artifactId>
     <packaging>war</packaging>
 
-    <name>sample.java.web</name>
+    <name>Sample :: WEB</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>sample.java.api</artifactId>
+            <artifactId>sample-api</artifactId>
             <version>${project.version}</version>
             <scope>provided</scope>
         </dependency>

@@ -6,24 +6,13 @@
         <artifactId>tutorial.sample</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
-    <artifactId>sample.java.jpa</artifactId>
+    <artifactId>sample-jpa</artifactId>
     <packaging>jar</packaging>
     <dependencies>
         <dependency>
             <groupId>javax.persistence</groupId>
             <artifactId>persistence-api</artifactId>
             <version>1.0.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>eclipselink</artifactId>
-            <version>2.5.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.persistence</groupId>
-            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
-            <version>2.5.2</version>
-            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax</groupId>
@@ -36,4 +25,5 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <name>Sample :: JPA</name>
 </project>

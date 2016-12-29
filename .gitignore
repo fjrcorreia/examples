@@ -18,3 +18,8 @@ hs_err_pid*
 ## IDE Specific Configuration
 **/nb-configuration.xml
 **/nbproject/*
+/sample/sample-ear/target/
+/sample/sample-ejb/target/
+/sample/sample-web/target/
+/sample/sample-jpa/target/
+/sample/sample-api/target/
